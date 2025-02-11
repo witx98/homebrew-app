@@ -2,12 +2,12 @@ class App < Formula
   desc "CLI tool for managing markdown changelogs"
   homepage "https://github.com/witx98/homebrew-test-logchange"
   license "Apache-2.0"
-  version "1.1.2"
+  version "1.1.3"
 
   on_linux do
     on_intel do
-      url "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.2/app-1.1.2-linuxx64.zip"
-      sha256 "50810c5f6f5674b39241d58ee0000945cea3f45c4444a0c6e4b837020bb5da31"
+      url "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.3/app-1.1.3-linuxx64.zip"
+      sha256 "368f35c445eb779818393a6c44aa9669d9ec7c6d2b6e25092bbbd809da5a9ded"
     end
   end
 
