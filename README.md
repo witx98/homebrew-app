@@ -18,8 +18,8 @@ brew "<formula>"
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
 
 
-curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.0.14/app-linuxx64.zip" | shasum -a 256 | cut -d " " -f 1
+curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.0/app-1.1.0-linuxx64.zip" | shasum -a 256 | cut -d " " -f 1
 
-curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.0.14/app-darwinarm64.zip" | shasum -a 256 | cut -d " " -f 1
+curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.0/app-1.1.0-darwinarm64.zip" | shasum -a 256 | cut -d " " -f 1
 
-curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.0.14/app-darwinx64.zip" | shasum -a 256 | cut -d " " -f 1
+curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.0/app-1.1.0-darwinx64.zip" | shasum -a 256 | cut -d " " -f 1
