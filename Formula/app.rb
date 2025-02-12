@@ -1,25 +1,22 @@
+# Generated with JReleaser 1.16.0 at 2025-02-12T20:31:47.529020104Z
+
 class App < Formula
-  desc "CLI tool for managing markdown changelogs"
+  desc "A CLI tool for managing changelogs"
   homepage "https://github.com/witx98/homebrew-test-logchange"
+  version "1.1.4"
   license "Apache-2.0"
-  version "1.1.3"
 
-  on_linux do
-    on_intel do
-      url "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.3/app-1.1.3-linuxx64.zip"
-      sha256 "368f35c445eb779818393a6c44aa9669d9ec7c6d2b6e25092bbbd809da5a9ded"
-    end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-linuxx64.zip"
+    sha256 "cd3dcdfef876647374af411357f8908c10cbc7016bc462d8152bb80cade8a6a8"
   end
-
-  on_macos do
-    on_arm do
-      url "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.2/app-1.1.2-darwinarm64.zip"
-      sha256 "37bab0d73dbcdda396963f9e7587f7d6843d70d6d595e7de565efb66d909d192"
-    end
-    on_intel do
-      url "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.2/app-1.1.2-darwinx64.zip"
-      sha256 "7e1cd3f2b433dd2159e7cba5fe811eedf61b8cf34f19c86e73e2a1fa0321b1e5"
-    end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-darwinarm64.zip"
+    sha256 "ca5d5d0817061145ad2a086ac2a834b282c9576ed6cf14f98e2c062e66bd5125"
+  end
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-darwinx64.zip"
+    sha256 "8e30645b245f24d4adbef7a16daa83cddf2e383e8c43b89dd82afaa7671fb34e"
   end
 
   def install

@@ -1,25 +1,48 @@
-# Witx98 App
+# Homebrew
 
-## How do I install these formulae?
+## Formulae
+Invoke either of the following commands if the formula is hosted at GitHub
 
-`brew install witx98/app/<formula>`
-
-Or `brew tap witx98/app` and then `brew install <formula>`.
-
-Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
-
-```ruby
-tap "witx98/app"
-brew "<formula>"
+```sh
+$ brew install witx98/app/<formula>
 ```
 
+Or
+
+```sh
+$ brew tap witx98/app
+$ brew install <formula>
+```
+
+Invoke the following command if the formula is *not* hosted at GitHub
+
+```sh
+brew tap witx98/homebrew-app 
+brew install <formula>
+```
+
+## Casks
+Invoke either of the following commands if the cask is hosted at GitHub
+
+```sh
+$ brew install --cask witx98/app/<cask>
+```
+
+Or
+
+```sh
+$ brew tap witx98/app
+$ brew install --cask <cask>
+```
+
+Invoke the following command if the cask is *not* hosted at GitHub
+
+```sh
+brew tap witx98/homebrew-app 
+brew install --cask <formula>
+```
+
+If you get a dialog stating the cask is broken try installing with `--no-quarantine`.
+
 ## Documentation
-
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
-
-
-curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.0/app-1.1.0-linuxx64.zip" | shasum -a 256 | cut -d " " -f 1
-
-curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.0/app-1.1.0-darwinarm64.zip" | shasum -a 256 | cut -d " " -f 1
-
-curl -sL "https://github.com/witx98/homebrew-test-logchange/releases/download/1.1.0/app-1.1.0-darwinx64.zip" | shasum -a 256 | cut -d " " -f 1
