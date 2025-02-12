@@ -1,22 +1,20 @@
-# Generated with JReleaser 1.16.0 at 2025-02-12T20:31:47.529020104Z
-
 class App < Formula
   desc "A CLI tool for managing changelogs"
   homepage "https://github.com/witx98/homebrew-test-logchange"
-  version "1.1.4"
+  version "1.1.5"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-linuxx64.zip"
-    sha256 "cd3dcdfef876647374af411357f8908c10cbc7016bc462d8152bb80cade8a6a8"
+    sha256 "cae19a6f91dc22ef2804a572b87526da337b4963cbfb48c9baf62c32129eab6c"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-darwinarm64.zip"
-    sha256 "ca5d5d0817061145ad2a086ac2a834b282c9576ed6cf14f98e2c062e66bd5125"
+    sha256 "2965e181571d3878ae5ec5e0dd634879686f02230d80f0e3238cc5bab54cbf70"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-darwinx64.zip"
-    sha256 "8e30645b245f24d4adbef7a16daa83cddf2e383e8c43b89dd82afaa7671fb34e"
+    sha256 "c09924a1fde01a4572dc66850b4ca1d13b85250d891372052d026357144bec83"
   end
 
   def install
@@ -29,9 +27,9 @@ class App < Formula
     elsif OS.mac? && Hardware::CPU.intel?
       os_arch = "darwinx64"
     else
-      puts "Invalid system or architecture"
+      puts "Unsupported system or architecture!"
     end
-    chmod 0755, "#{libexec}/app-#{version}-#{os_arch}/app-#{version}-runner"
-    bin.write_exec_script "#{libexec}/app-#{version}-#{os_arch}/app-#{version}-runner"
+    chmod 0755, "#{libexec}/app-#{os_arch}/app-#{version}-runner"
+    bin.write_exec_script "#{libexec}/app-#{os_arch}/app-#{version}-runner"
   end
 end

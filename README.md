@@ -4,45 +4,18 @@
 Invoke either of the following commands if the formula is hosted at GitHub
 
 ```sh
-$ brew install witx98/app/<formula>
+brew install witx98/app/app
 ```
 
 Or
 
 ```sh
-$ brew tap witx98/app
-$ brew install <formula>
+brew tap witx98/app
+brew install app
 ```
 
-Invoke the following command if the formula is *not* hosted at GitHub
-
-```sh
-brew tap witx98/homebrew-app 
-brew install <formula>
-```
-
-## Casks
-Invoke either of the following commands if the cask is hosted at GitHub
-
-```sh
-$ brew install --cask witx98/app/<cask>
-```
-
-Or
-
-```sh
-$ brew tap witx98/app
-$ brew install --cask <cask>
-```
-
-Invoke the following command if the cask is *not* hosted at GitHub
-
-```sh
-brew tap witx98/homebrew-app 
-brew install --cask <formula>
-```
-
-If you get a dialog stating the cask is broken try installing with `--no-quarantine`.
 
 ## Documentation
+Checkout [Logchange's documentation]()
+
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
