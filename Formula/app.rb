@@ -1,20 +1,20 @@
 class App < Formula
   desc "A CLI tool for managing changelogs"
   homepage "https://github.com/witx98/homebrew-test-logchange"
-  version "1.1.5"
+  version "1.1.7"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-linuxx64.zip"
-    sha256 "cae19a6f91dc22ef2804a572b87526da337b4963cbfb48c9baf62c32129eab6c"
+    sha256 "a5696522adbfb25adc3d9c15c5ae6564c2aac7252af9a90fe19111f9ded457fa"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-darwinarm64.zip"
-    sha256 "2965e181571d3878ae5ec5e0dd634879686f02230d80f0e3238cc5bab54cbf70"
+    sha256 "970c841000681666c7835e351dcc59558dcb79c36bc27e5d4fc27066b28bad6b"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/witx98/homebrew-test-logchange/releases/download/#{version}/app-darwinx64.zip"
-    sha256 "c09924a1fde01a4572dc66850b4ca1d13b85250d891372052d026357144bec83"
+    sha256 "ab9c3d777524b4bb7a08e093e629e73d0fe286e40e23785453f6e5cd61ef743d"
   end
 
   def install
