@@ -1,20 +1,20 @@
 class App < Formula
   desc "CLI tool for managing changelogs"
   homepage "https://github.com/witx98/app"
-  version "1.1.8"
+  version "1.1.9"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/witx98/app/releases/download/#{version}/app-linuxx64.zip"
-    sha256 "2266f050fae74f742d5796fd1836875d133342ed6cfc301cdc50bdc9c8eb977a"
+    sha256 "fa72a8079e84c0fe791c07b510b0642203eebc38a115fa07cc6797a76c723ce8"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/witx98/app/releases/download/#{version}/app-darwinarm64.zip"
-    sha256 "96081c96968f5f08610af7ecd065a9bb048a50f6c8d4b09af3ee0afa68804a3c"
+    sha256 "8bbf0214174f2c1659b445e40e2b936d661860252d8fc9490e5ca41ad78ae4cd"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/witx98/app/releases/download/#{version}/app-darwinx64.zip"
-    sha256 "73084b29438c3af55e5a0b93eb32a431e0328768b062fb55867d123449ceb7be"
+    sha256 "c533baa29d8ed8765525412267e3b5d5071e659251f015fff111e92e14dfcb83"
   end
 
   def install
