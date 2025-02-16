@@ -35,6 +35,6 @@ class App < Formula
 
   test do
     output = shell_output("#{bin}/app-#{version}-runner --version")
-    assert_match version, output
+    assert_match version.to_s, output
   end
 end
