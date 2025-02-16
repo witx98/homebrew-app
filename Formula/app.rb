@@ -1,5 +1,5 @@
 class App < Formula
-  desc "A CLI tool for managing changelogs"
+  desc "CLI tool for managing changelogs"
   homepage "https://github.com/witx98/app"
   version "1.1.8"
   license "Apache-2.0"
