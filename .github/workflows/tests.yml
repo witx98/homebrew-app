@@ -35,6 +35,9 @@ jobs:
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
+      - name: Install latest version of formula
+        run: brew install witx98/app/app
+
       - name: Run formula tests
         run: brew test witx98/app/app
 
