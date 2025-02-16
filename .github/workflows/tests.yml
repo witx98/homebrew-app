@@ -8,10 +8,25 @@ on:
 
 jobs:
   test-bot:
+    name: Test formula on ${{ matrix.name }}
+    runs-on: ${{ matrix.runs-on }}
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-13, macos-15]
-    runs-on: ${{ matrix.os }}
+        include:
+          - name: "Linux x86_64"
+            base: linux
+            runs-on: ubuntu-24.04
+            platform: linuxx64
+
+          - name: "macOS x86_64"
+            base: macos
+            runs-on: macos-13
+            platform: darwinx64
+
+          - name: "macOS ARM64"
+            base: macos
+            runs-on: macos-14
+            platform: darwinarm64
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
